@@ -24,8 +24,8 @@ public class ActionAvanceTest {
 		Position positionInitialeTondeuse = new Position(1, 1);
 		Tondeuse tondeuse = new Tondeuse(Orientation.NORTH, positionInitialeTondeuse);
 		
-		ActionGauche actionGauche = new ActionGauche(coinSuperieur);
-		actionGauche.execute(tondeuse);
+		ActionAvance actionAvance = new ActionAvance(coinSuperieur);
+		actionAvance.execute(tondeuse);
 		assertEquals(tondeuse.getPosition(), new Position(1, 2));
 		
 	}
@@ -36,8 +36,8 @@ public class ActionAvanceTest {
 		Position positionInitialeTondeuse = new Position(1, 2);
 		Tondeuse tondeuse = new Tondeuse(Orientation.NORTH, positionInitialeTondeuse);
 		
-		ActionGauche actionGauche = new ActionGauche(coinSuperieur);
-		actionGauche.execute(tondeuse);
+		ActionAvance actionAvance = new ActionAvance(coinSuperieur);
+		actionAvance.execute(tondeuse);
 		assertEquals(tondeuse.getPosition(), new Position(1, 3));
 	}
 	
@@ -47,8 +47,8 @@ public class ActionAvanceTest {
 		Position positionInitialeTondeuse = new Position(2, 1);
 		Tondeuse tondeuse = new Tondeuse(Orientation.EAST, positionInitialeTondeuse);
 		
-		ActionGauche actionGauche = new ActionGauche(coinSuperieur);
-		actionGauche.execute(tondeuse);
+		ActionAvance actionAvance = new ActionAvance(coinSuperieur);
+		actionAvance.execute(tondeuse);
 		assertEquals(tondeuse.getPosition(), new Position(3, 1));
 	}
 	
@@ -58,8 +58,8 @@ public class ActionAvanceTest {
 		Position positionInitialeTondeuse = new Position(3, 1);
 		Tondeuse tondeuse = new Tondeuse(Orientation.EAST, positionInitialeTondeuse);
 		
-		ActionGauche actionGauche = new ActionGauche(coinSuperieur);
-		actionGauche.execute(tondeuse);
+		ActionAvance actionAvance = new ActionAvance(coinSuperieur);
+		actionAvance.execute(tondeuse);
 		assertEquals(tondeuse.getPosition(), positionInitialeTondeuse);
 	}
 	
@@ -69,8 +69,8 @@ public class ActionAvanceTest {
 		Position positionInitialeTondeuse = new Position(1, 3);
 		Tondeuse tondeuse = new Tondeuse(Orientation.NORTH, positionInitialeTondeuse);
 		
-		ActionGauche actionGauche = new ActionGauche(coinSuperieur);
-		actionGauche.execute(tondeuse);
+		ActionAvance actionAvance = new ActionAvance(coinSuperieur);
+		actionAvance.execute(tondeuse);
 		assertEquals(tondeuse.getPosition(), new Position(1, 3));
 	}
 	
@@ -80,8 +80,8 @@ public class ActionAvanceTest {
 		Position positionInitialeTondeuse = new Position(1, 0);
 		Tondeuse tondeuse = new Tondeuse(Orientation.SOUTH, positionInitialeTondeuse);
 		
-		ActionGauche actionGauche = new ActionGauche(coinSuperieur);
-		actionGauche.execute(tondeuse);
+		ActionAvance actionAvance = new ActionAvance(coinSuperieur);
+		actionAvance.execute(tondeuse);
 		assertEquals(tondeuse.getPosition(), positionInitialeTondeuse);
 	}
 	
@@ -91,8 +91,8 @@ public class ActionAvanceTest {
 		Position positionInitialeTondeuse = new Position(0, 1);
 		Tondeuse tondeuse = new Tondeuse(Orientation.WEST, positionInitialeTondeuse);
 		
-		ActionGauche actionGauche = new ActionGauche(coinSuperieur);
-		actionGauche.execute(tondeuse);
+		ActionAvance actionAvance = new ActionAvance(coinSuperieur);
+		actionAvance.execute(tondeuse);
 		assertEquals(tondeuse.getPosition(), positionInitialeTondeuse);
 	}
 }
