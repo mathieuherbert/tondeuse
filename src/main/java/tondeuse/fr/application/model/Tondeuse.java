@@ -31,6 +31,10 @@ public class Tondeuse {
 	public void setPosition(Position position) {
 		this.position = position;
 	}
+
+	public Orientation getOrientation() {
+		return orientation;
+	}
 	
 	
 	
