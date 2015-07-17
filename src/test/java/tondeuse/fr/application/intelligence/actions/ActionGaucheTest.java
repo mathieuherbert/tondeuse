@@ -26,8 +26,8 @@ public class ActionGaucheTest {
 		Tondeuse tondeuse = new Tondeuse(Orientation.NORTH,
 				positionInitialeTondeuse);
 
-		ActionDroite actionDroite = new ActionDroite(coinSuperieur);
-		actionDroite.execute(tondeuse);
+		ActionGauche actionGauche = new ActionGauche(coinSuperieur);
+		actionGauche.execute(tondeuse);
 		assertEquals(tondeuse.getPosition(), new Position(1, 2));
 		assertSame(tondeuse.getOrientation(), Orientation.WEST);
 	}
@@ -39,8 +39,8 @@ public class ActionGaucheTest {
 		Tondeuse tondeuse = new Tondeuse(Orientation.WEST,
 				positionInitialeTondeuse);
 
-		ActionDroite actionDroite = new ActionDroite(coinSuperieur);
-		actionDroite.execute(tondeuse);
+		ActionGauche actionGauche = new ActionGauche(coinSuperieur);
+		actionGauche.execute(tondeuse);
 		assertEquals(tondeuse.getPosition(), new Position(1, 2));
 		assertSame(tondeuse.getOrientation(), Orientation.SOUTH);
 	}
@@ -52,8 +52,8 @@ public class ActionGaucheTest {
 		Tondeuse tondeuse = new Tondeuse(Orientation.SOUTH,
 				positionInitialeTondeuse);
 
-		ActionDroite actionDroite = new ActionDroite(coinSuperieur);
-		actionDroite.execute(tondeuse);
+		ActionGauche actionGauche = new ActionGauche(coinSuperieur);
+		actionGauche.execute(tondeuse);
 		assertEquals(tondeuse.getPosition(), new Position(1, 2));
 		assertSame(tondeuse.getOrientation(), Orientation.EAST);
 	}
@@ -65,8 +65,8 @@ public class ActionGaucheTest {
 		Tondeuse tondeuse = new Tondeuse(Orientation.EAST,
 				positionInitialeTondeuse);
 
-		ActionDroite actionDroite = new ActionDroite(coinSuperieur);
-		actionDroite.execute(tondeuse);
+		ActionGauche actionGauche = new ActionGauche(coinSuperieur);
+		actionGauche.execute(tondeuse);
 		assertEquals(tondeuse.getPosition(), new Position(1, 2));
 		assertSame(tondeuse.getOrientation(), Orientation.NORTH);
 	}
