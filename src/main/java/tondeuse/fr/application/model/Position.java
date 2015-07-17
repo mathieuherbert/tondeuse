@@ -60,4 +60,31 @@ public class Position {
 			throw new IllegalPositionException("xPosition (" + yPosition + ") doit etre superieur a 0");
 		this.yPosition = yPosition;
 	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + xPosition;
+		result = prime * result + yPosition;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Position other = (Position) obj;
+		if (xPosition != other.xPosition)
+			return false;
+		if (yPosition != other.yPosition)
+			return false;
+		return true;
+	}
+	
+	
 }
