@@ -6,7 +6,6 @@ import org.slf4j.LoggerFactory;
 import tondeuse.fr.application.exceptions.IllegalPositionException;
 import tondeuse.fr.application.model.Position;
 import tondeuse.fr.application.model.Tondeuse;
-import tondeuse.fr.application.model.Tondeuse.Orientation;
 
 public class ActionAvance extends AbstractAction {
 	static final Logger LOGGER = LoggerFactory.getLogger(ActionAvance.class);
