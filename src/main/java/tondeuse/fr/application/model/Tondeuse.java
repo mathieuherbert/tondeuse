@@ -6,7 +6,7 @@ public class Tondeuse {
 	 * les différentes orientations possibles
 	 */
 	public enum Orientation {
-		NORTH, EST, WEST, SOUTH
+		NORTH, EAST, WEST, SOUTH
 	}
     /**
      * l'orientation de la tondeuse
