@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import tondeuse.fr.application.exceptions.IllegalPositionException;
+import tondeuse.fr.application.model.AbstractAction;
 import tondeuse.fr.application.model.Position;
 import tondeuse.fr.application.model.Tondeuse;
 

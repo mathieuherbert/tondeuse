@@ -2,8 +2,6 @@ package tondeuse.fr.application.model;
 
 import java.util.ArrayList;
 
-import tondeuse.fr.application.intelligence.actions.AbstractAction;
-
 public class Tondeuse {
 	/**
 	 * 

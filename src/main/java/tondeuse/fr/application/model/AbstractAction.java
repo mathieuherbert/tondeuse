@@ -1,7 +1,5 @@
-package tondeuse.fr.application.intelligence.actions;
+package tondeuse.fr.application.model;
 
-import tondeuse.fr.application.model.Position;
-import tondeuse.fr.application.model.Tondeuse;
 
 public abstract class AbstractAction {
 	/**
