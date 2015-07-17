@@ -1,5 +1,9 @@
 package tondeuse.fr.application.model;
 
+import java.util.ArrayList;
+
+import tondeuse.fr.application.intelligence.actions.AbstractAction;
+
 public class Tondeuse {
 	/**
 	 * 
@@ -13,16 +17,22 @@ public class Tondeuse {
      */
 	private Orientation orientation;
 	
-	
-	public Tondeuse(Orientation orientation, Position position) {
-		this.orientation = orientation;
-		this.position = position;
-	}
-
 	/**
 	 * Position de la tondeuse
 	 */
 	private Position position;
+	
+	/**
+	 * Liste des actions que la tondeuse doit executer
+	 */
+	private ArrayList<AbstractAction> sequenceActions; 
+	public Tondeuse(Orientation orientation, Position position) {
+		this.orientation = orientation;
+		this.position = position;
+		this.sequenceActions = new ArrayList<AbstractAction>();
+	}
+
+
 	
 	public Position getPosition() {
 		return position;
@@ -40,5 +50,12 @@ public class Tondeuse {
 		this.orientation = orientation;
 	}
 	
+	/**
+	 * Ajoute une action a la liste des actions
+	 * @param action
+	 */
+	public void addAction(AbstractAction action){
+		this.sequenceActions.add(action);
+	}
 
 }
