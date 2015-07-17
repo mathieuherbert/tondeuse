@@ -60,7 +60,7 @@ public class ActionAvanceTest {
 		
 		ActionAvance actionAvance = new ActionAvance(coinSuperieur);
 		actionAvance.execute(tondeuse);
-		assertEquals(tondeuse.getPosition(), positionInitialeTondeuse);
+		assertEquals(tondeuse.getPosition(), new Position(3, 1));
 	}
 	
 	@Test
@@ -82,7 +82,7 @@ public class ActionAvanceTest {
 		
 		ActionAvance actionAvance = new ActionAvance(coinSuperieur);
 		actionAvance.execute(tondeuse);
-		assertEquals(tondeuse.getPosition(), positionInitialeTondeuse);
+		assertEquals(tondeuse.getPosition(), new Position(1, 0));
 	}
 	
 	@Test
@@ -93,6 +93,6 @@ public class ActionAvanceTest {
 		
 		ActionAvance actionAvance = new ActionAvance(coinSuperieur);
 		actionAvance.execute(tondeuse);
-		assertEquals(tondeuse.getPosition(), positionInitialeTondeuse);
+		assertEquals(tondeuse.getPosition(), new Position(0, 1));
 	}
 }
