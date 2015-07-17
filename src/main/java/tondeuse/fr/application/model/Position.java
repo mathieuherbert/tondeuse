@@ -9,6 +9,7 @@ import tondeuse.fr.application.exceptions.IllegalPositionException;
  *
  */
 public class Position {
+	
 	/**
 	 * Représente la position X (> 0)
 	 */
@@ -59,5 +60,4 @@ public class Position {
 			throw new IllegalPositionException("xPosition (" + yPosition + ") doit etre superieur a 0");
 		this.yPosition = yPosition;
 	}
-
 }
