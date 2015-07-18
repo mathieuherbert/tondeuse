@@ -12,7 +12,7 @@ public class ActionGauche extends AbstractAction {
 	
 	static final Logger LOGGER = LoggerFactory.getLogger(ActionGauche.class);
 	
-	public ActionGauche(Position coinSuperieurDroit) {
+	public ActionGauche(final Position coinSuperieurDroit) {
 		super(coinSuperieurDroit);
 	}
 

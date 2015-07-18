@@ -56,4 +56,10 @@ public class Tondeuse {
 		this.sequenceActions.add(action);
 	}
 
+
+	public ArrayList<AbstractAction> getSequenceActions() {
+		return sequenceActions;
+	}
+	
+
 }

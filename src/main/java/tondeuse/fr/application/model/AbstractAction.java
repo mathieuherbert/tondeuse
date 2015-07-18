@@ -16,7 +16,7 @@ public abstract class AbstractAction {
 	protected Position coinSuperieurDroit;
     
 	
-	public AbstractAction(Position coinSuperieurDroit) {
+	public AbstractAction(final Position coinSuperieurDroit) {
 		this.coinSuperieurDroit = coinSuperieurDroit;
 	}
 

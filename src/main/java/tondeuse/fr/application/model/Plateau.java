@@ -29,4 +29,9 @@ public class Plateau {
 	public void addTondeuse(Tondeuse tondeuse){
 		this.tondeuses.add(tondeuse);
 	}
+
+	public ArrayList<Tondeuse> getTondeuses() {
+		return tondeuses;
+	}
+	
 }

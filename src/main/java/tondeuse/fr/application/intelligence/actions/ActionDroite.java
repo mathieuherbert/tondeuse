@@ -16,7 +16,7 @@ import tondeuse.fr.application.model.Tondeuse.Orientation;
 public class ActionDroite extends AbstractAction {
 	static final Logger LOGGER = LoggerFactory.getLogger(ActionDroite.class);
 	
-	public ActionDroite(Position coinSuperieurDroit) {
+	public ActionDroite(final Position coinSuperieurDroit) {
 		super(coinSuperieurDroit);
 	}
 

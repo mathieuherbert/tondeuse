@@ -16,7 +16,7 @@ import tondeuse.fr.application.model.Tondeuse;
 public class ActionAvance extends AbstractAction {
 	static final Logger LOGGER = LoggerFactory.getLogger(ActionAvance.class);
 
-	public ActionAvance(Position coinSuperieurDroit) {
+	public ActionAvance(final Position coinSuperieurDroit) {
 		super(coinSuperieurDroit);
 		LOGGER.debug("Action Avance detectee");
 	}
