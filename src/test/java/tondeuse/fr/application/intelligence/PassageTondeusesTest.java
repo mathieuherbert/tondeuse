@@ -1,5 +1,7 @@
 package tondeuse.fr.application.intelligence;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
 
 import tondeuse.fr.application.exceptions.IllegalPositionException;
@@ -51,6 +53,11 @@ public class PassageTondeusesTest {
 		
 		PassageTondeuses passageTondeuses = new PassageTondeuses(plateau);
 		passageTondeuses.passerTondeuses();
+		
+		assertEquals(tondeuse1.getPosition(), new Position(1,3));
+		assertEquals(tondeuse1.getOrientation(), Orientation.NORTH);
+		assertEquals(tondeuse2.getPosition(), new Position(5,1));
+		assertEquals(tondeuse2.getOrientation(), Orientation.EAST);
 	}
 
 }
