@@ -58,6 +58,23 @@ public class PassageTondeusesTest {
 		assertEquals(tondeuse2.getPosition(), new Position(5,1));
 		assertEquals(tondeuse2.getOrientation(), Orientation.EAST);
 	}
+	
+	
+	@Test
+	public void testTondeuseSansAction() throws IllegalPositionException {
+		Position coinSuperieur = new Position(5, 5);
+		Plateau plateau = new Plateau(coinSuperieur);
+		
+		Tondeuse tondeuse1 = new Tondeuse(Orientation.NORTH, new Position(1,2));
+		plateau.addTondeuse(tondeuse1);
+		
+		
+		PassageTondeuses passageTondeuses = new PassageTondeuses(plateau);
+		passageTondeuses.passerTondeuses();
+		
+		assertEquals(tondeuse1.getPosition(), new Position(1,2));
+		assertEquals(tondeuse1.getOrientation(), Orientation.NORTH);
+	}
 	@Test
 	public void testSansTondeuse() throws IllegalPositionException {
 		Position coinSuperieur = new Position(5, 5);
