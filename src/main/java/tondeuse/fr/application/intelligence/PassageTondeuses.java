@@ -7,6 +7,7 @@ import tondeuse.fr.application.intelligence.actions.ActionAvance;
 import tondeuse.fr.application.model.AbstractAction;
 import tondeuse.fr.application.model.Plateau;
 import tondeuse.fr.application.model.Tondeuse;
+import tondeuse.fr.application.utils.PrintPositions;
 
 public class PassageTondeuses {
 	private Plateau plateau;
@@ -29,11 +30,8 @@ public class PassageTondeuses {
 			}
 		}
 		LOGGER.info("Toutes les tondeuses sont passées");
-		for (Tondeuse tondeuse : plateau.getTondeuses()) {
-			LOGGER.info("position ({},{}), orientation : {}", tondeuse
-					.getPosition().getxPosition(), tondeuse.getPosition()
-					.getyPosition(), tondeuse.getOrientation());
-		}
+		PrintPositions.printInConsole(plateau.getTondeuses());
+		
 
 	}
 	
