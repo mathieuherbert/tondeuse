@@ -1,6 +1,7 @@
 package tondeuse.fr.application.intelligence;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertSame;
 
 import org.junit.Test;
 
@@ -17,9 +18,7 @@ import tondeuse.fr.application.model.Tondeuse.Orientation;
 public class PassageTondeusesTest {
 
 	@Test
-	public void test() throws IllegalPositionException {
-		
-		
+	public void testExo() throws IllegalPositionException {
 		Position coinSuperieur = new Position(5, 5);
 		AbstractAction actionGauche = new ActionGauche(coinSuperieur);
 		AbstractAction actionDroite = new ActionDroite(coinSuperieur);
@@ -59,5 +58,16 @@ public class PassageTondeusesTest {
 		assertEquals(tondeuse2.getPosition(), new Position(5,1));
 		assertEquals(tondeuse2.getOrientation(), Orientation.EAST);
 	}
+	@Test
+	public void testSansTondeuse() throws IllegalPositionException {
+		Position coinSuperieur = new Position(5, 5);
+		Plateau plateau = new Plateau(coinSuperieur);
+		
+		PassageTondeuses passageTondeuses = new PassageTondeuses(plateau);
+		passageTondeuses.passerTondeuses();
+		
+		assertSame(plateau.getTondeuses().size(), 0);
+	}
+	
 
 }
