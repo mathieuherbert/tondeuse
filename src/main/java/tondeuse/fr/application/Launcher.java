@@ -4,6 +4,7 @@ import tondeuse.fr.application.exceptions.ParsingException;
 import tondeuse.fr.application.fichiers.GestionFichier;
 import tondeuse.fr.application.intelligence.PassageTondeuses;
 import tondeuse.fr.application.model.Plateau;
+import tondeuse.fr.application.utils.PrintPositions;
 
 /**
  * Classe de lancement de l'application
@@ -14,12 +15,14 @@ public class Launcher {
 
 	public static void main(String[] args) throws ParsingException {
 		if(args.length != 1){
-			throw new IllegalArgumentException("Le chemin vers le fichier doit etre donne en entree");
+			System.err.println("Le chemin vers le fichier doit etre donne en entree");
+			System.exit(-1);
 		}
 		
 		Plateau plateau = GestionFichier.chargerFichier(args[0]);
 		PassageTondeuses passageTondeuses = new PassageTondeuses(plateau);
 		passageTondeuses.passerTondeuses();
+		PrintPositions.printInConsole(plateau.getTondeuses());
 		
 	}
 
