@@ -121,7 +121,7 @@ public class LoadElements {
 		if (ligneSplited.length != 3) {
 			throw new ParsingException(
 					"Les coordonnees et l'orientation doivent etre de la forme x y o(ligne : "
-							+ ligneSplited + ")");
+							+ ligne + ")");
 		}
 		Position position = loadCoordonnees(new String[]{ligneSplited[0], ligneSplited[1]});
 		Orientation orientation = loadOrientation(ligneSplited[2]);
