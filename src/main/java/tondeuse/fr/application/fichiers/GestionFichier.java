@@ -7,8 +7,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import tondeuse.fr.application.exceptions.IllegalPositionException;
 import tondeuse.fr.application.exceptions.ParsingException;
+import tondeuse.fr.application.intelligence.PassageTondeuses;
 import tondeuse.fr.application.model.Plateau;
 import tondeuse.fr.application.model.Position;
 import tondeuse.fr.application.model.Tondeuse;
@@ -19,8 +23,14 @@ import tondeuse.fr.application.model.Tondeuse;
  *
  */
 public class GestionFichier {
+	
+	static final Logger LOGGER = LoggerFactory.getLogger(GestionFichier.class);
+	
 	private String path;
-
+	/**
+	 * 
+	 * @param path le chemin du fichier
+	 */
 	private GestionFichier(String path) {
 		this.path = path;
 	}
@@ -29,7 +39,7 @@ public class GestionFichier {
 
 		GestionFichier gestionFichier = new GestionFichier(path);
 		String[] lignes = gestionFichier.readFile(path);
-
+		LOGGER.info("lecture du fichier");
 		Plateau plateau = null;
 		if (lignes.length == 0) {
 			throw new ParsingException("fichier vide");
@@ -65,6 +75,7 @@ public class GestionFichier {
 	 *             Si un probleme est rencontre
 	 */
 	private String[] readFile(String path) throws ParsingException {
+		LOGGER.info("chargement du fichier");
 		FileReader fileReader = null;
 		List<String> lignes = new ArrayList<String>();
 		try {
