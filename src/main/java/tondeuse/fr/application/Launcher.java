@@ -18,10 +18,11 @@ public class Launcher {
 			System.err.println("Le chemin vers le fichier doit etre donne en entree");
 			System.exit(-1);
 		}
-		
+		//passage des tondeuses
 		Plateau plateau = GestionFichier.chargerFichier(args[0]);
 		PassageTondeuses passageTondeuses = new PassageTondeuses(plateau);
 		passageTondeuses.passerTondeuses();
+		//impression des resultats
 		PrintPositions.printInConsole(plateau.getTondeuses());
 		
 	}
