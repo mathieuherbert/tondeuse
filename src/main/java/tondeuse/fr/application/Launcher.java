@@ -13,18 +13,22 @@ import tondeuse.fr.application.utils.PrintPositions;
  */
 public class Launcher {
 
-	public static void main(String[] args) throws ParsingException {
+	public static void main(String[] args) {
 		if(args.length != 1){
 			System.err.println("Le chemin vers le fichier doit etre donne en entree");
 			System.exit(-1);
 		}
+		try{
 		//passage des tondeuses
 		Plateau plateau = GestionFichier.chargerFichier(args[0]);
 		PassageTondeuses passageTondeuses = new PassageTondeuses(plateau);
 		passageTondeuses.passerTondeuses();
 		//impression des resultats
 		PrintPositions.printInConsole(plateau.getTondeuses());
-		
+		}catch(ParsingException e){
+			System.err.println("erreur detectee"+e.getMessage());
+			System.exit(-1);
+		}
 	}
 
 }
