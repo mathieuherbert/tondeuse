@@ -1,19 +1,18 @@
-Projet tondeuse
-===================
-
 ##Entrée
 fichier de style :<br />
-5 5<br />
-1 2 N<br />
-GAGAGAGAA<br />
-3 3 E<br />
-AADAADADDA<br />
+
+    5 5
+    1 2 N
+    GAGAGAGAA
+    3 3 E
+    AADAADADDA
 
 ##Sortie
-1 3 N<br />
-5 1 E<br />
 
-##Récupération et lancement de l'application (avec un fichier exemple en paramètre)
+    1 3 N
+    5 1 E
+
+##Récupération et lancement de l'application
 
     git clone https://github.com/mathieuherbert/tondeuse.git
     cd tondeuse
