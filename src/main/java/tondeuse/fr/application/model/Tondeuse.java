@@ -1,6 +1,7 @@
 package tondeuse.fr.application.model;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Tondeuse {
 	/**
@@ -23,7 +24,8 @@ public class Tondeuse {
 	/**
 	 * Liste des actions que la tondeuse doit executer
 	 */
-	private ArrayList<AbstractAction> sequenceActions; 
+	private List<AbstractAction> sequenceActions; 
+	
 	public Tondeuse(Orientation orientation, Position position) {
 		this.orientation = orientation;
 		this.position = position;
@@ -56,8 +58,15 @@ public class Tondeuse {
 		this.sequenceActions.add(action);
 	}
 
+	/**
+	 * Ajoute une liste d'actions a la liste des actions
+	 * @param action
+	 */
+	public void addActions(List<AbstractAction> actions){
+		this.sequenceActions.addAll(actions);
+	}
 
-	public ArrayList<AbstractAction> getSequenceActions() {
+	public List<AbstractAction> getSequenceActions() {
 		return sequenceActions;
 	}
 	
